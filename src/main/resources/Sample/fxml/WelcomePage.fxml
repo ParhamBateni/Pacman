@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml" fx:controller="Sample.Controller.WelcomePageController">
+    <HBox layoutX="230.0" layoutY="40.0">
+        <Label styleClass="title" text="Welcome Menu" textFill="chartreuse"/>
+    </HBox>
+
+    <VBox alignment="CENTER" layoutX="200.0" layoutY="100.0" prefHeight="210.0" prefWidth="200.0">
+        <Button onMouseClicked="#enterSignupPage" prefWidth="100.0" styleClass="button" text="signup"/>
+        <Button onMouseClicked="#enterLoginPage" prefWidth="100.0" text="login">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </VBox.margin>
+        </Button>
+        <Button onMouseClicked="#newGameClicked" prefWidth="100.0" text="new game">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </VBox.margin>
+        </Button>
+        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="settings"
+                onMouseClicked="#gameSettingsClicked">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </VBox.margin>
+        </Button>
+        <Button onMouseClicked="#exitClicked" prefWidth="100.0" text="exit">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </VBox.margin>
+        </Button>
+
+    </VBox>
+    <stylesheets>
+        <URL value="@../CSS/MenuCss.css"/>
+    </stylesheets>
+
+</AnchorPane>

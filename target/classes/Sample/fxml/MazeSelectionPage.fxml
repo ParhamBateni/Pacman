@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@../CSS/MenuCss.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Sample.Controller.MazeSelectionPageController">
+   <children>
+      <Button layoutX="279.0" layoutY="345.0" mnemonicParsing="false" onMouseClicked="#backClicked" text="back" />
+      <MenuButton layoutX="266.0" layoutY="35.0" mnemonicParsing="false" style="-fx-background-color: gray; -fx-font-weight: bold;" text="Mazes" textFill="chartreuse">
+      </MenuButton>
+      <Pane fx:id="mazePane" layoutX="169.0" layoutY="72.0" prefHeight="186.0" prefWidth="288.0" />
+      <Button layoutX="94.0" layoutY="288.0" mnemonicParsing="false" text="save maze" />
+      <Button layoutX="416.0" layoutY="288.0" mnemonicParsing="false" text="select maze"/>
+      <Button layoutX="237.0" layoutY="288.0" mnemonicParsing="false" text="generate new maze" />
+   </children>
+
+    
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+<?import java.net.URL?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="Sample.View.GamePage"
+          prefHeight="400.0" prefWidth="600.0" styleClass="gameBackground">
+    <columnConstraints>
+        <ColumnConstraints prefWidth="1000"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="1000"/>
+    </rowConstraints>
+    <stylesheets>
+        <URL value="@../CSS/MenuCss.css"/>
+    </stylesheets>
+</GridPane>

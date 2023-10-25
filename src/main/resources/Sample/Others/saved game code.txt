@@ -1,0 +1,111 @@
+ /* Stage popUp = new Stage();
+        VBox messageBox = new VBox(20);
+        popUp.initModality(Modality.APPLICATION_MODAL);
+        BackgroundFill background_fill = new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, Insets.EMPTY);
+        Background background = new Background(background_fill);
+        Button yesButton = new Button("yes");
+        Button noButton = new Button("no");
+        yesButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                play();
+                popUp.close();
+                try {
+                    //todo  User.loggedInUser.getSavedGame().resumeGame();
+                } catch (Exception e) {
+                }
+            }
+        });
+        noButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                play();
+                popUp.close();
+                try {
+                    new GamePage().playNewGame(new Game(), ((Stage) ((Node) mouseEvent.getSource()).getScene().getWindow()));
+                } catch (Exception e) {
+                }
+            }
+        });
+
+        Label text = new Label("you have a saved game. do you want to play in that?");
+        text.setTextFill(Color.RED);
+        HBox buttonPlace = new HBox(20);
+        buttonPlace.setAlignment(Pos.CENTER);
+        messageBox.getChildren().add(text);
+        messageBox.getChildren().add(buttonPlace);
+        buttonPlace.getChildren().add(noButton);
+        buttonPlace.getChildren().add(yesButton);
+        text.setFont(Font.font(20));
+        messageBox.setAlignment(Pos.BASELINE_CENTER);
+        messageBox.setBackground(background);
+        Scene scene = new Scene(messageBox, 500, 100);
+        scene.getStylesheets().add("/Sample/CSS/MenuCss.css");
+        popUp.setScene(scene);
+        popUp.show();*/
+
+Game Class:
+
+
+
+package Sample.Model;
+
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+import java.util.ArrayList;
+
+public class Game {
+    public static ArrayList<Game> games = new ArrayList<>();
+    private final int score = 0;
+    private final int countGhostsAte = 0;
+     public User owner;
+     public Scene scene;
+     public Map map;
+     public Pacman pacman;
+    public boolean isAudioMuted = false;
+    public boolean isGamePaused;
+    public boolean isGameEnded;
+    public boolean isBombAte = false;
+      public Thread redGhostThread;
+   public Thread pinkGhostThread;
+    public Thread orangeGhostThread;
+    public Thread cyanGhostThread;
+    private boolean isSoundMuted;
+       private AnchorPane anchorPane;
+   private HBox lifeBox;
+
+   private HBox scoreBoard;
+    private Stage stage;
+    private Stage pauseStage;
+
+   private Ghost redGhost;
+
+   private Ghost cyanGhost;
+
+   private Ghost pinkGhost;
+
+   private Ghost orangeGhost;
+    private boolean gameHasBeenStarted;
+
+    public Game() {
+        //owner=User.loggedInUser;
+        games.add(this);
+    }
+
+    public static ArrayList<Game> getGames() {
+        return games;
+    }
+
+    //    public User getOwner() {
+//        return owner;
+//    }
+    public static void addGame(Game game) {
+        games.add(game);
+    }
+}
+
+
+

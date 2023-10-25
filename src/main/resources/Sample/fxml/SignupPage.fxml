@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Sample.Controller.SignupPageController"
+            prefHeight="400.0" prefWidth="600.0" styleClass="background">
+    <HBox layoutX="230.0" layoutY="40.0" styleClass="title">
+        <Label text="Signup Menu" textFill="chartreuse"/>
+    </HBox>
+    <VBox alignment="CENTER" layoutX="200.0" layoutY="130.0" prefHeight="210.0" prefWidth="200.0">
+        <TextField fx:id="usernameField" promptText="username"/>
+        <PasswordField fx:id="passwordField" promptText="password">
+                <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </VBox.margin>
+        </PasswordField>
+        <VBox alignment="CENTER" prefWidth="100.0" prefHeight="100.0">
+            <Button mnemonicParsing="false" onMouseClicked="#signupClicked" text="signup" >
+                <VBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#backClicked" text="back">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </VBox.margin>
+            </Button>
+        </VBox>
+    </VBox>
+
+    <stylesheets>
+        <URL value="@../CSS/MenuCss.css"/>
+    </stylesheets>
+</AnchorPane>
+
+

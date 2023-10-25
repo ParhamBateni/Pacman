@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Sample.Controller.ScoreBoardPageController">
+    <HBox layoutX="240.0" layoutY="40.0" styleClass="title">
+        <Label text="Score Board" textFill="chartreuse" />
+    </HBox>
+    <Button layoutX="270.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#backClicked" text="back">
+    </Button>
+    <stylesheets>
+        <URL value="@../CSS/MenuCss.css" />
+    </stylesheets>
+</AnchorPane>
